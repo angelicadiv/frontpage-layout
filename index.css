@@ -26,7 +26,8 @@ body{
   padding: 5px;
 }
 
-.navbar-right a:hover{
+.navbar-right a:hover,
+.desc-quicklink a:hover{
   color: rgb(127, 206, 246);
 }
 .navbar-left img{
@@ -40,30 +41,41 @@ body{
 }
 
 .container{
-  text-align: center;
   background-image:linear-gradient(rgba(47, 161, 255, 0.5), rgba(152, 102, 218, 0.5)),
   url(assets/bg-img.jpg);
   background-repeat: no-repeat;
   background-size:cover;
   height: 750px;
   width: 100%;
+  display:flex;
+}
+
+.container-txt,
+.container{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .container-txt{
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
+  width: 50%;
+  margin: auto;
 }
 
 .container-txt h1{
   font-size: 45px;
-  margin-bottom: 20px;
 }
 
-.container-txt p{
-  margin-bottom: 30px;
+.container-txt p,
+.container-txt h1,
+.our-product h1,
+.our-product-content h2,
+.about-us h1,
+.description h2{
+  margin-bottom: 20px;
 }
 
 .container-txt button{
@@ -84,17 +96,14 @@ body{
 
 .our-product{
   text-align: center;
-  margin: 50px;
-  padding-left: 75px;
-  padding-right: 75px;
+  margin: 50px 100px;
 }
 
 .our-product-content,
 .description-content{
   display: flex;
   align-items: center;
-  justify-content:space-between;
-  padding: 30px;
+  justify-content:space-around;
   list-style: none;
 }
 
@@ -109,31 +118,25 @@ body{
   width: 128px;
 }
 
-.our-product-content h2{
-  margin-bottom: 20px;
-}
-
 .about-us{
   background-image: linear-gradient(to bottom right, rgb(202, 169, 255), rgb(127, 206, 246));
-  padding: 100px;
   display: flex;
+  padding: 50px;
+  align-items: center;
   justify-content: space-between;
-}
-
-.about-us h1,
-.description h2{
-  margin-bottom: 20px;
 }
 
 .about-us-content{
   width: 50%;
-  margin-top: 80px;
+  padding: 0px 50px;
   color: white;
+  align-items: center;
 }
 
 .about-us img{
   width: 450px;
   height: auto;
+  padding-right:50px;
 }
 
 .testimonial{
@@ -144,7 +147,9 @@ body{
   padding: 50px;
   background-color: rgb(127, 206, 246);
   align-items: center;
-  text-align: center;
+  display:flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 .newsletter input{
@@ -157,18 +162,36 @@ body{
   padding: 20px;
 }
 
+.newsletter input:focus{
+  outline: none;
+}
+
 .newsletter button{
   height: 42px;
   width: 100px;
   background-color: white;
   color: rgb(127, 206, 246);
-  border: 1.5px solid rgb(127, 206, 246);;
+  border: 1.5px solid rgb(127, 206, 246);
   border-radius: 5px;
   cursor: pointer;
+  font-weight: bold;
+}
+
+.newsletter button:hover{
+  color: rgb(202, 169, 255);
+}
+
+.newsletter ::placeholder{
+  color: white;
 }
 
 .description{
-  padding:100px;
+  margin:100px;
+  display: flex;
+}
+
+.desc-quicklink ul{
+  list-style:none;
 }
 
 .desc-quicklink a{
@@ -176,11 +199,11 @@ body{
   color: black;
   display: contents;
 }
+
 .desc-about,
 .desc-quicklink,
 .desc-contact-us{
   width: 33.3%;
-  margin: 20px;
 }
 
 .social img{
