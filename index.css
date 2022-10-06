@@ -30,6 +30,7 @@ body{
 .desc-quicklink a:hover{
   color: rgb(127, 206, 246);
 }
+
 .navbar-left img{
   width: 50px;
 }
@@ -74,7 +75,8 @@ body{
 .our-product h1,
 .our-product-content h2,
 .about-us h1,
-.description h2{
+.description h2,
+.content-right h2{
   margin-bottom: 20px;
 }
 
@@ -140,7 +142,34 @@ body{
 }
 
 .testimonial{
-  padding: 100px;
+  margin: 100px;
+}
+
+.swipe-left img,
+.swipe-right img{
+  width:32px;
+}
+
+.testi-swipe,
+.testi-content{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testi-content{
+  width: 75%;
+}
+
+.content-left img{
+  width: 96px;
+  border-radius: 50%;
+}
+
+.content-right,
+.content-left,
+.swipe-left{
+  padding: 0px 15px;
 }
 
 .newsletter{
