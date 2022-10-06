@@ -203,7 +203,8 @@ body{
 .desc-about,
 .desc-quicklink,
 .desc-contact-us{
-  width: 33.3%;
+  width: 25%;
+  padding: 0px 20px;
 }
 
 .social img{
